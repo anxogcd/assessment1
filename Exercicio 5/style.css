@@ -1,0 +1,29 @@
+form {
+  max-width: 800px;
+  min-width: 400px;
+  margin: auto;
+}
+
+input:required {
+  border: 1px solid red;
+}
+
+fieldset {
+  background: lightgray;
+  padding: 1rem;
+}
+
+fieldset:hover {
+  background: gray;
+}
+
+fieldset:first-of-type,
+fieldset:last-of-type {
+  border-bottom: 5px solid black;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+}

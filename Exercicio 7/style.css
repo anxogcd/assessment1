@@ -1,0 +1,169 @@
+html {
+  --facebook: url(https://image.flaticon.com/icons/png/512/21/21155.png);
+  --instagram: url(https://i.pinimg.com/originals/1e/d9/a0/1ed9a0fd507968861891b1098f480f4a.png);
+  --twitter: url(https://image.flaticon.com/icons/png/512/23/23681.png);
+  --linkedin: url(https://image.flaticon.com/icons/png/512/61/61109.png);
+  --tiktok: url(https://image.flaticon.com/icons/png/512/1946/1946552.png);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: orange;
+  font-family: sans-serif;
+}
+
+body header h1 {
+  color: white;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 4rem;
+}
+
+body section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  max-width: 20rem;
+  margin: 4rem;
+  box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.382);
+}
+
+article header {
+  background: white;
+  text-align: center;
+  height: 18rem;
+}
+
+article header img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+article header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+article header nav ul li a {
+  display: block;
+  height: 100%;
+}
+
+article header nav ul li {
+  width: 30px;
+  height: 30px;
+  margin: 0.75rem;
+  border-radius: 50%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(30%);
+}
+
+article header nav ul li:hover {
+  filter: contrast(100%);
+}
+
+.facebook {
+  background-image: var(--facebook);
+}
+
+.instagram {
+  background-image: var(--instagram);
+}
+
+.twitter {
+  background-image: var(--twitter);
+}
+
+.linkedin {
+  background-image: var(--linkedin);
+}
+
+.tiktok {
+  background-image: var(--tiktok);
+}
+
+article main {
+  height: 20rem;
+}
+
+article main p {
+  background: blue;
+  color: white;
+  padding: 1rem;
+  height: 100%;
+  text-align: center;
+}
+
+/* EXTRAS */
+
+@keyframes appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sizing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+div {
+  opacity: 0;
+  animation-name: appears;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  opacity: 0;
+  animation-name: appears;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+div:first-of-type {
+  animation-delay: 2s;
+}
+
+div:nth-of-type(2) {
+  animation-delay: 3s;
+}
+
+div:nth-of-type(3) {
+  animation-delay: 4s;
+}
+
+article:hover {
+  animation-name: sizing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  opacity: 1;
+}
